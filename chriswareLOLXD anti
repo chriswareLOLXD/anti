@@ -1,0 +1,22 @@
+---not u cannot togle btw sorry :(
+https://github.com/chriswareLOLXD/anti.git
+local vel = -40
+local hip = 2.80
+
+function anti()
+while getgenv().enabled == true do
+    task.wait()
+    local oldvel = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldvel.X, vel, oldvel.Z)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldvel.X, oldvel.Y, oldvel.Z)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldvel.X, vel, oldvel.Z)
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = hip
+   end
+end
+
+game.StarterGui:SetCore("SendNotification", {
+                    Title = "chriswareLOLXD",
+                    Text = "anti lock on reset to turn it off:)"
+                })
+            
+anti()
